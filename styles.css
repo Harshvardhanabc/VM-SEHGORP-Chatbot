@@ -106,6 +106,7 @@
     padding: 10px;
     background-color: #f1f5f9;
     width: 100%;
+    border-radius: 10px;
   }
   
   .input-area input {
