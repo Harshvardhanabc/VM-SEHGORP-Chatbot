@@ -18,8 +18,9 @@ startChatBtn.addEventListener('click', () => {
 
 // Handle Send Button click
 sendBtn.addEventListener('click', () => {
-  const message = userInput.value;
+  let message = userInput.value;
   if (message) {
+    message = removeAsterisks(message); // Remove asterisks before sending
     addMessage(message, 'user');
     userInput.value = '';
     setTimeout(() => {
@@ -27,6 +28,11 @@ sendBtn.addEventListener('click', () => {
     }, 1000);
   }
 });
+
+// Function to remove asterisks from the message
+function removeAsterisks(message) {
+  return message.replace(/\*/g, ''); // Regular expression to replace all * with an empty string
+}
 
 // Add message to chat box
 function addMessage(message, sender) {
