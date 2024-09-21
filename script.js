@@ -22,9 +22,9 @@ sendBtn.addEventListener('click', () => {
   if (message) {
     message = removeAsterisks(message); // Remove asterisks before sending
     addMessage(message, 'user');
-    userInput.value = '';
+    userInput.value = ''; // Clear input box
     setTimeout(() => {
-      botReply(message);
+      botReply(message); // Send message after a delay
     }, 1000);
   }
 });
@@ -40,7 +40,7 @@ function addMessage(message, sender) {
   messageDiv.classList.add('message', sender);
   messageDiv.innerText = message;
   chatBox.appendChild(messageDiv);
-  chatBox.scrollTop = chatBox.scrollHeight;  // Scroll to the bottom when a message is added
+  chatBox.scrollTop = chatBox.scrollHeight; // Scroll to bottom of chat box
 }
 
 // Bot Reply with API
