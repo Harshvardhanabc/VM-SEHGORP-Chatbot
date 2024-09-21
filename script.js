@@ -44,6 +44,7 @@ function addMessage(message, sender) {
 }
 
 // Bot Reply with API
+// Bot Reply with API
 async function botReply(userMessage) {
   try {
     const response = await fetch(apiEndpoint, {
@@ -82,7 +83,11 @@ async function botReply(userMessage) {
     if (response.ok) {
       // Check for the expected structure in the API response
       if (data && data.candidates && data.candidates.length > 0 && data.candidates[0].content && data.candidates[0].content.parts.length > 0) {
-        const botMessage = data.candidates[0].content.parts[0].text.trim(); // Extract bot's message
+        let botMessage = data.candidates[0].content.parts[0].text.trim(); // Extract bot's message
+        
+        // Remove asterisks from bot's message
+        botMessage = removeAsterisks(botMessage); 
+        
         addMessage(botMessage, 'bot'); // Show the bot's response
       } else {
         // Fallback message if the structure is not as expected
