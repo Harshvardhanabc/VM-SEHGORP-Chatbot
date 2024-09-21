@@ -45,6 +45,7 @@ function addMessage(message, sender) {
 
 // Bot Reply with API
 // Bot Reply with API
+// Bot Reply with API
 async function botReply(userMessage) {
   try {
     const response = await fetch(apiEndpoint, {
@@ -86,7 +87,7 @@ async function botReply(userMessage) {
         let botMessage = data.candidates[0].content.parts[0].text.trim(); // Extract bot's message
         
         // Remove asterisks from bot's message
-        botMessage = removeAsterisks(botMessage); 
+        botMessage = botMessage.replace(/\*/g, '');  // Remove all asterisks
         
         addMessage(botMessage, 'bot'); // Show the bot's response
       } else {
