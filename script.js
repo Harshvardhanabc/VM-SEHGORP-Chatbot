@@ -6,7 +6,7 @@ const chatBox = document.getElementById('chat-box');
 const userInput = document.getElementById('user-input');
 
 // Your actual Google Gemini API Key
-const apiKey = 'AIzaSyAlpZ_o1PT86KTMnU0LO2oi5PN7bENHtbA';
+const apiKey = 'AIzaSyBnw58JhTgnyLtvpxFC4dHLt1bwsbGhfVI';
 const apiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
 
 // Show Chat Screen and hide Welcome Screen
