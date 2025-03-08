@@ -24,10 +24,11 @@
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    background-image: url('LOGO.png');
+    background-image: url('harshvardhan.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    color: #25ebdb;
   }
   
   .screen {
@@ -63,16 +64,17 @@
   
   #welcome-screen button {
     padding: 10px 20px;
-    background-color: #3b82f6;
-    color: white;
+    background-color: #3f4d64;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 50px;
     font-size: 16px;
     cursor: pointer;
+    opacity: 80%;
   }
   
   #welcome-screen button:hover {
-    background-color: #2563eb;
+    background-color: #25eb88;
   }
   
   /* Chat Screen Styles */
@@ -84,12 +86,13 @@
   }
   
   .chat-header {
-    background-color: #3b82f6;
+    background-color: #404650;
     color: white;
     width: 100%;
     padding: 15px;
     text-align: center;
     border-radius: 15px;
+    opacity: 75%;
   }
   
   .chat-box {
@@ -121,7 +124,7 @@
   
   .input-area button {
     padding: 10px 20px;
-    background-color: #3b82f6;
+    background-color: #f63b5a;
     color: white;
     border: none;
     border-radius: 30px;
@@ -129,7 +132,7 @@
   }
   
   .input-area button:hover {
-    background-color: #2563eb;
+    background-color: #e525eb;
   }
   
   /* Chat Messages */
@@ -143,13 +146,14 @@
   }
   
   .message.bot {
-    background-color: #e5e7eb;
+    background-color: #21f70d;
     align-self: flex-start; /* Bot messages aligned to the left */
+    color: black;
   }
   
   .message.user {
-    background-color: #3b82f6;
-    color: white;
+    background-color: #3bf683;
+    color: rgb(0, 0, 0);
     align-self: flex-end; /* User messages aligned to the right */
   }
   
